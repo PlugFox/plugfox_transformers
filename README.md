@@ -30,7 +30,7 @@ as soon as one of the previous ones is finished.
 The transformer breaks the sequence of events in the stream.
   
 
-### For example: Transform myEventsStream
+### Example usage:
 
 ```dart
 Stream<String> myGenerator(int event) async* {
@@ -57,7 +57,7 @@ Stream<int>.fromIterable(const <int>[1, 2, 3, 4, 5, 6, 7])
   .forEach(print);
 ```
 
-### For example: Override `bloc` package behavior  
+### Override `bloc` package behavior:  
   
 ```dart
 @override  
