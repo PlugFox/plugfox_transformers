@@ -13,17 +13,17 @@
   
 Serves for simultaneous parallel tasks
 
-Executes simultaneously [maxNumberOfProcesses] generators [convert]
-transforming each [Event] into a Stream of [State].
-The resulting stream is returned from the [Stream.transform] method.
+Executes simultaneously `[maxNumberOfProcesses]` generators `[convert]`
+transforming each `[Event]` into a Stream of `[State]`.
+The resulting stream is returned from the `[Stream.transform]` method.
 
-If [maxNumberOfProcesses] is set to 0 or less, then all
+If `[maxNumberOfProcesses]` is set to 0 or less, then all
 incoming events processed instantly.
 
-If [maxNumberOfProcesses] is set to 1, then the
+If `[maxNumberOfProcesses]` is set to 1, then the
 behavior is almost identical .asyncExpand method.
 
-If [maxNumberOfProcesses] is set to 2 or more, then this sets the number
+If `[maxNumberOfProcesses]` is set to 2 or more, then this sets the number
 simultaneously performed tasks and each subsequent event begins to be processed
 as soon as one of the previous ones is finished.
  
