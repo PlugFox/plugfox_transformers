@@ -6,15 +6,30 @@
 ## About  
   
 Сontains a set of useful stream transformers
++ `Simultaneous` (Serves for simultaneous parallel tasks)
   
+
+## Simultaneous
   
-## Stream transformers  
+Serves for simultaneous parallel tasks
+
+Executes simultaneously [maxNumberOfProcesses] generators [convert]
+transforming each [Event] into a Stream of [State].
+The resulting stream is returned from the [Stream.transform] method.
+
+If [maxNumberOfProcesses] is set to 0 or less, then all
+incoming events processed instantly.
+
+If [maxNumberOfProcesses] is set to 1, then the
+behavior is almost identical .asyncExpand method.
+
+If [maxNumberOfProcesses] is set to 2 or more, then this sets the number
+simultaneously performed tasks and each subsequent event begins to be processed
+as soon as one of the previous ones is finished.
+ 
+The transformer breaks the sequence of events in the stream.
   
-+ Simultaneous
-  
-  
-## How To Use  
-  
+
 ### For example: Transform myEventsStream
 
 ```dart
@@ -37,9 +52,7 @@ Stream<String> myGenerator(int event) async* {
   yield state;
 }
 
-final Stream<int> stream = Stream<int>.fromIterable(const <int>[1, 2, 3, 4, 5, 6, 7]);
-controller
-  .stream
+Stream<int>.fromIterable(const <int>[1, 2, 3, 4, 5, 6, 7])
   .transform<String>(Simultaneous<int, String>(myGenerator, maxNumberOfProcesses: 2))
   .forEach(print);
 ```
@@ -58,6 +71,5 @@ Stream<MyState> transformEvents(
 ## Changelog  
   
 Refer to the [Changelog](https://github.com/plugfox/plugfox_transformers/blob/master/CHANGELOG.md) to get all release notes.  
-  
   
   
