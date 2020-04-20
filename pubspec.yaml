@@ -1,8 +1,8 @@
 name: plugfox_transformers
 description: >
   Contains the following transformers:
-    - Simultaneous
-version: 1.0.1
+    - Simultaneous (Serves for simultaneous parallel tasks)
+version: 1.0.2
 #author: Plague Fox <Plugfox@gmail.com>
 homepage: https://github.com/PlugFox/plugfox_transformers
 

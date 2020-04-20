@@ -1,11 +1,17 @@
+# 1.0.2
+##### 2020-04-20  
+  
+Update format and add example
+  
+  
 # 1.0.1
-### 2020-04-20  
+##### 2020-04-20  
   
 Update documentation for `Simultaneous` transformer
   
   
 # 1.0.0
-### 2020-04-20  
+##### 2020-04-20  
   
 Initial Version of the library.  
   
