@@ -1,13 +1,18 @@
 # plugfox_transformers  
   
+[![chatroom icon](https://patrolavia.github.io/telegram-badge/chat.png)](https://t.me/PlugFox)
 [![Pub](https://img.shields.io/pub/v/plugfox_transformers.svg)](https://pub.dartlang.org/packages/plugfox_transformers)  
   
 ## About  
   
 Сontains a set of useful stream transformers
   
-### Simultaneous
-
+  
+## Stream transformers  
+  
++ Simultaneous
+  
+  
 ## How To Use  
   
 ### For example: Transform myEventsStream
@@ -49,11 +54,10 @@ Stream<MyState> transformEvents(
     events.transform<MyState>(Simultaneous<MyEvent, MyState>(next, maxNumberOfProcesses: 0));
 ```
   
-## Stream transformer Classes  
-  
-  + Simultaneous
   
 ## Changelog  
   
 Refer to the [Changelog](https://github.com/plugfox/plugfox_transformers/blob/master/CHANGELOG.md) to get all release notes.  
+  
+  
   
