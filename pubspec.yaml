@@ -2,9 +2,8 @@ name: plugfox_transformers
 description: >
   Contains the following transformers:
     - Simultaneous
-version: 1.0.0+1
-author: 
-  - Plague Fox <Plugfox@gmail.com>
+version: 1.0.0
+#author: Plague Fox <Plugfox@gmail.com>
 homepage: https://github.com/PlugFox/plugfox_transformers
 
 #publish_to: 'none' 

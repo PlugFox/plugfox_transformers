@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:pedantic/pedantic.dart' show unawaited;
+//import 'package:pedantic/pedantic.dart' show unawaited;
 
 /// Serves for simultaneous parallel tasks
 ///
@@ -150,9 +150,10 @@ class _SimultaneousController {
 
   FutureOr<void> awaitTaskIfNeeded(Future<void> callback) {
     _addTask();
-    unawaited(
-      callback.whenComplete(_rmTask)
-    );
+    // ignore: unawaited
+    //unawaited(
+      callback.whenComplete(_rmTask);
+    //);
     if (awaitTask) return callback;
   }
 
