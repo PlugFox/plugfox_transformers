@@ -61,10 +61,12 @@ Stream<int>.fromIterable(const <int>[1, 2, 3, 4, 5, 6, 7])
   
 ```dart
 @override  
-Stream<MyState> transformEvents(
-  Stream<MyEvent> events,
-  Stream<MyState> Function(MyEvent) next) => 
-    events.transform<MyState>(Simultaneous<MyEvent, MyState>(next, maxNumberOfProcesses: 0));
+Stream<Transition<Event, State>> transformEvents(
+  Stream<Event> events,
+  Stream<Transition<Event, State>> Function(Event) next) => 
+    events.transform<Transition<Event, State>>(
+      Simultaneous<Event, Transition<Event, State>>(next, maxNumberOfProcesses: 0)
+    );
 ```
   
   
