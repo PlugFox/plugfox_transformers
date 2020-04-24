@@ -29,10 +29,10 @@ import 'dart:async';
 ///
 /// **Example usage to override the behavior of the [bloc] library:**
 /// ```
-///   @override  
+///   @override
 ///   Stream<Transition<Event, State>> transformEvents(
 ///     Stream<Event> events,
-///     Stream<Transition<Event, State>> Function(Event) next) => 
+///     Stream<Transition<Event, State>> Function(Event) next) =>
 ///       events.transform<Transition<Event, State>>(
 ///         Simultaneous<Event, Transition<Event, State>>(next, maxNumberOfProcesses: 0)
 ///       );

@@ -2,7 +2,7 @@ name: plugfox_transformers
 description: >
   Contains the following transformers:
     - Simultaneous (Serves for simultaneous parallel tasks)
-version: 1.1.0
+version: 1.1.1
 #author: Plague Fox <Plugfox@gmail.com>
 homepage: https://github.com/PlugFox/plugfox_transformers
 
@@ -14,12 +14,6 @@ environment:
 dependencies:
 
 dev_dependencies:
-  build_runner: ">=1.7.0 <2.0.0"
-  build_web_compilers: ">=2.7.0 <3.0.0"
-  mockito: ">=3.0.0 <4.0.0"  
-  stack_trace: ">=1.9.2 <2.0.0"
-  pedantic: '>=1.9.0 <2.0.0'
-  #effective_dart: '>=1.2.1 <2.0.0'
-  test: '>=1.14.2 <2.0.0'
+  test: any
 
 dependency_overrides:
